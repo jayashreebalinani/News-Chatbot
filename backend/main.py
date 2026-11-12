@@ -21,11 +21,10 @@ MAX_STEPS = 5
 client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 app = FastAPI()
 app.add_middleware(
-CORSMiddleware,
-allow_origins=["http://localhost:5173"],
-allow_origin_regex=r"https://.*\.vercel\.app",
-allow_methods=["*"],
-allow_headers=["*"],
+    CORSMiddleware,
+    allow_origins=["https://news-chatbot-frontend-nine.vercel.app"],
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 
